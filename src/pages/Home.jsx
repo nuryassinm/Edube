@@ -3,16 +3,12 @@ import { motion } from "framer-motion";
 import Nav from "../components/Nav";
 import Hero from "../components/Hero";
 import { useState, useEffect } from "react";
-import Stats from "../components/Stats";
-import AboutUs from "../components/AboutUs";
+import Mission from "../components/Mission";
+import FeaturedProperties from "../components/FeaturedProperties";
 import Footer from "../components/Footer"
-import Heritage from "../components/Heritage";
-import PracticeAreas from "../components/PracticeAreas";
-import Team from "../components/Team";
-import Expertise from '../components/Expertise'
-import CounterSection from "../components/CounterSection";
-import FAQSection from "../components/FAQSection";
-import Internship from "../components/Internship";
+import Sketch from "../components/Sketch";
+import MapReviewSection from "../components/MapReviewSection";
+import Blog from "../components/Blog";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,8 +21,8 @@ function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen font-serif bg-white">
-      <Nav />
+    <div className="min-h-screen font-sans overflow-hidden bg-white">
+      {/* <Nav /> */}
       {isLoading ? (
         <SkeletonLoader />
       ) : (
@@ -36,15 +32,11 @@ function Home() {
           transition={{ duration: 0.5 }}
         >
           <Hero />
-          <Stats />
-          <AboutUs />
-          <PracticeAreas />
-          <Heritage />
-          <Team />
-          <Internship />
-          <Expertise />
-          <CounterSection />
-          <FAQSection />
+          {/* <Mission /> */}
+          <FeaturedProperties />
+          <MapReviewSection />
+          <Sketch />
+          <Blog />
           <Footer />
 
         </motion.div>
