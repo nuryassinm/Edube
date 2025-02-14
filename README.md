@@ -25,3 +25,4 @@ Currently, two official plugins are available:
 # Wiselaws
 # Wiselaws
 # Real-State
+# Lona
