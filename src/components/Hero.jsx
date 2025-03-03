@@ -5,7 +5,7 @@ import Nav from './Nav';
 
 const Hero = () => {
   return (
-    <div className="min-h-screen  bg-gray-100 bg-[url('../assets/wintry-landscape-scenery-with-modified-cross-country-skiing-way.jpg')] bg-cover bg-center">
+    <div className="md:h-[800px] h-[600px]  bg-gray-100 bg-[url('../assets/wintry-landscape-scenery-with-modified-cross-country-skiing-way.jpg')] bg-cover bg-center">
       <Nav />
       <div className="max-w-[105rem] mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -38,7 +38,7 @@ const Hero = () => {
             </div>
 
             <p className="text-gray-900 text-sm md:text-md  max-w-md">
-              They're the kind of homes that work in tandem with their environment, 
+              Theyre the kind of homes that work in tandem with their environment, 
               almost appearing synergistically with the mountain that encompasses them.
             </p>
             {/* Thumbnail Images */}

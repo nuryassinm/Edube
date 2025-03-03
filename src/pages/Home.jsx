@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import Mission from "../components/Mission";
 import FeaturedProperties from "../components/FeaturedProperties";
 import Footer from "../components/Footer"
-import Sketch from "../components/Sketch";
+import DesignComponent from "../components/DesignComponent";
 import MapReviewSection from "../components/MapReviewSection";
 import Blog from "../components/Blog";
 
@@ -35,7 +35,7 @@ function Home() {
           {/* <Mission /> */}
           <FeaturedProperties />
           <MapReviewSection />
-          <Sketch />
+          <DesignComponent />
           <Blog />
           <Footer />
 

@@ -20,7 +20,7 @@ export default function DesignComponent() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="grid md:grid-cols-3 grid-cols-1 w-full  space-y-6 md:space-y-0 md:space-x-8">
+      <div className="grid lg:grid-cols-3 grid-cols-1 w-full  space-y-6 lg:space-y-0 lg:space-x-8">
         {/* Left section - Sketch */}
         <motion.div
           className="bg-white shadow-md rounded-lg p-6 min-w-[400px] max-w-xl"

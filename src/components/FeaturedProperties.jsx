@@ -10,12 +10,12 @@ const FeatureSection = () => {
         animate={{ opacity: 1, y: 0 }}
         className="max-w-[105rem] mx-auto"
       >
-        <h2 className="md:text-[4rem] text-xl  font-bold mb-12 text-center">
+        <h2 className="md:text-4xl lg:text-6xl text-xl  font-bold mb-12 text-center">
           Log cabins are to Norway <span className="text-gray-400">like fjords</span>
           <br /> are to its <span className="font-medium">mountains.</span>
         </h2>
 
-        <div className="grid md:grid-cols-5 gap-10">
+        <div className="grid md:grid-cols-4 lg:grid-cols-5 gap-10">
           {/* Feature Card */}
           <motion.div 
             whileHover={{ scale: 1.02 }}
