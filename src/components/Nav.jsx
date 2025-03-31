@@ -15,136 +15,74 @@ const Nav = () => {
   ];
 
   return (
-    <motion.nav 
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className="w-full top-0 z-50  shadow-sm"
-    >
-      <div className="max-w-[105rem] mx-auto px-4 relative">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <motion.div 
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center"
-          >
-            <div className="flex items-center gap-2">
-              <div className="h-10 w-10 rounded-full bg-white flex justify-center items-center">
-                <div className='w-5 h-5 bg-blue-600 rotate-45' />
-              </div>
-              <span className="font-bold text-2xl">LONA</span>
-            </div>
-          </motion.div>
+    <header className="w-full bg-white">
+    <nav className="relative flex flex-wrap items-center justify-between px-4 py-3 mx-auto max-w-7xl">
+      <motion.div 
+        className="flex items-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <a href="#" className="flex items-center">
+          <img src="/api/placeholder/200/50" alt="Edube Logo" className="h-10" />
+        </a>
+      </motion.div>
+      
+      {/* Mobile menu button */}
+      <motion.button 
+        type="button" 
+        className="inline-flex items-center p-2 ml-3 text-sm rounded-lg md:hidden focus:outline-none"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <span className="sr-only">Open main menu</span>
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </motion.button>
+      
+      {/* Desktop menu */}
+      <motion.div 
+        className="hidden w-full md:block md:w-auto" 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+      >
+        <ul className="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+          <li>
+            <a href="#" className="block py-2 pr-4 pl-3 text-gray-900 border-b md:border-0 md:p-0 font-semibold">Home</a>
+          </li>
+          <li>
+            <a href="#" className="block py-2 pr-4 pl-3 text-gray-900 border-b md:border-0 md:p-0">Courses</a>
+          </li>
+          <li>
+            <a href="#" className="block py-2 pr-4 pl-3 text-gray-900 border-b md:border-0 md:p-0">Pages</a>
+          </li>
+          <li>
+            <a href="#" className="block py-2 pr-4 pl-3 text-gray-900 border-b md:border-0 md:p-0">Blog</a>
+          </li>
+          <li>
+            <a href="#" className="block py-2 pr-4 pl-3 text-gray-900 border-b md:border-0 md:p-0">Contact</a>
+          </li>
+          <li>
+            <a href="#" className="block py-2 pr-4 pl-3 text-gray-900 md:border-0 md:p-0">About Us</a>
+          </li>
+        </ul>
+      </motion.div>
+      
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+      >
+        <button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-2 px-4 rounded">
+          Admit Now
+        </button>
+      </motion.div>
+    </nav>
+  </header>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-
-          {/* Navigation Links */}
-          <div className="hidden md:flex items-center gap-4">
-            <div className="bg-white p-1 rounded-md flex items-center space-x-4">
-              {links.map((link) => (
-                <motion.a
-                  key={link.name}
-                  href={link.url}
-                  whileHover={{ scale: 1.05 }}
-                  onClick={() => setActiveLink(link.name)}
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors
-                    ${activeLink === link.name ? 'bg-gray-200 shadow-sm' : 'text-gray-600 hover:text-gray-900'}`}
-                >
-                  {link.name}
-                </motion.a>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Section */}
-          <div className="hidden md:flex items-center gap-4">
-            <div className="relative">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                onClick={() => setIsSearchOpen(!isSearchOpen)}
-                className="p-2 hover:bg-gray-100 rounded-full"
-              >
-                <Search className="w-5 h-5" />
-              </motion.button>
-
-              {isSearchOpen && (
-                <motion.div 
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="absolute top-12 right-0 bg-white shadow-lg p-4 rounded-lg"
-                >
-                  <input
-                    type="text"
-                    placeholder="Search properties..."
-                    className="w-64 p-2 border rounded-lg"
-                    autoFocus
-                  />
-                </motion.div>
-              )}
-            </div>
-
-            <motion.a
-              href="/contact"
-              whileHover={{ scale: 1.05 }}
-              className="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-full"
-            >
-              Contact Us
-              <span className="ml-2">→</span>
-            </motion.a>
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              className="p-2 hover:bg-gray-100 rounded-full"
-            >
-              <User className="w-5 h-5" />
-            </motion.button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="md:hidden absolute top-16 left-0 right-0 bg-white border-t"
-          >
-            <div className="px-4 py-2">
-              {links.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.url}
-                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-md"
-                  onClick={() => {
-                    setActiveLink(link.name);
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  {link.name}
-                </a>
-              ))}
-              <div className="mt-4 p-2">
-                <input
-                  type="text"
-                  placeholder="Search properties..."
-                  className="w-full p-2 border rounded-lg"
-                />
-              </div>
-              <a
-                href="/contact"
-                className="block mt-4 w-full text-center bg-black text-white px-4 py-2 rounded-full"
-              >
-                Contact Us
-              </a>
-            </div>
-          </motion.div>
-        )}
-      </div>
-    </motion.nav>
   );
 };
 
