@@ -27,6 +27,27 @@ function Home() {
   return (
     <div className="min-h-screen font-mono overflow-hidden bg-white">
       {/* <Nav /> */}
+      <iframe
+        src="https://www.mixweb.io/banner"
+        width="100%"
+        height="75px"
+        frameBorder="0"
+        style={{
+          border: "none",
+          display: "block",
+          position: "fixed",
+          top: "0",
+          zIndex: "9999",
+          backgroundColor: "white",
+        }}
+      ></iframe>
+      <motion.header
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="mt-[75px] top-[75px] z-50 "
+      ></motion.header>
+
       {isLoading ? (
         <SkeletonLoader />
       ) : (
@@ -35,7 +56,7 @@ function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <Hero />
+          <Hero  className=""/>
           {/* <Mission /> */}
           <EducationHero />
           <EducationStats />
