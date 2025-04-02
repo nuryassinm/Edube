@@ -81,7 +81,8 @@ const JoinTestimonialComponent = () => {
       ))}
 
       {/* Join As Teacher Section */}
-      <section className="relative">
+    <section className='flex justify-center w-full'>
+      <div className="relative w-full max-w-7xl">
         {!imagesLoaded ? (
           <div className="w-full h-80 bg-gray-200 animate-pulse"></div>
         ) : (
@@ -96,7 +97,7 @@ const JoinTestimonialComponent = () => {
         )}
 
         <div className="absolute inset-0 flex items-center">
-          <div className="container mx-auto px-4">
+          <div className="container  mx-auto px-4">
             <div className="md:w-1/2 text-white p-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -129,7 +130,8 @@ const JoinTestimonialComponent = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Testimonial Section */}
       <section className="py-16 bg-white">

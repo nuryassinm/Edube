@@ -16,34 +16,34 @@ const OpinionBadgesComponent = () => {
   const badges = [
     {
       id: 1,
-      image: "../assets/child-toys-still-life.jpg",
+      image: "../assets/logo.png",
       alt: "Academic University Badge"
     },
     {
       id: 2,
-      image: "../assets/child-toys-still-life.jpg",
+      image: "../assets/logo2.png",
       alt: "State University Badge"
     },
     {
       id: 3,
-      image: "../assets/child-toys-still-life.jpg",
+      image: "../assets/logo.png",
       alt: "Academy Badge"
     },
     {
       id: 4,
-      image: "../assets/child-toys-still-life.jpg",
+      image: "../assets/logo2.png",
       alt: "College Badge"
     },
     {
       id: 5,
-      image: "../assets/child-toys-still-life.jpg",
+      image: "../assets/logo2.png",
       alt: "Educational College Badge"
     }
   ];
 
   return (
     <section className="py-12 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl  mx-auto px-4">
         {/* Opinion Form */}
         <div className="flex relative flex-col md:flex-row items-center justify-between mb-16">
           <motion.div 
@@ -73,7 +73,7 @@ const OpinionBadgesComponent = () => {
           
           {/* Educational Kid Illustration */}
           <motion.div
-            className="hidden  md:block absolute right-0 top-0 transform -translate-y-1/2"
+            className="hidden  md:block absolute -right-56 top-0 transform -translate-y-1/2"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -82,7 +82,7 @@ const OpinionBadgesComponent = () => {
               <div className="w-32 h-32 bg-gray-200 animate-pulse rounded-full"></div>
             ) : (
               <img 
-                src="../assets/land.jpg" 
+                src="../assets/reading2.png" 
                 alt="Kid reading book illustration" 
                 className="w-32"
               />
@@ -91,7 +91,7 @@ const OpinionBadgesComponent = () => {
         </div>
 
         {/* Educational Badges */}
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+        <div className="flex flex-wrap md:justify-between justify-center items-center gap-8 md:gap-16">
           {badges.map((badge, index) => (
             <motion.div
               key={badge.id}

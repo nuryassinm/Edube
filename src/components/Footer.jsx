@@ -30,7 +30,7 @@ const FooterComponent = () => {
     <footer className="bg-no-repeat bg-cover bg-center relative" style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/api/placeholder/1920/600')" }}>
       {/* Contact Info Bar */}
       <div className="bg-yellow-400 py-4">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Email */}
             <motion.div 
@@ -79,7 +79,7 @@ const FooterComponent = () => {
 
       {/* Main Footer */}
       <div className="py-12">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* About Us */}
             <motion.div

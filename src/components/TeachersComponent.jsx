@@ -20,25 +20,25 @@ const TeachersComponent = () => {
       id: 1,
       name: "Laiha Khan",
       position: "UI / UX Designer",
-      image: "../assets/land.jpg"
+      image: "../assets/man.jpg"
     },
     {
       id: 2,
       name: "Ahammed Imon",
       position: "UI / UX Designer",
-      image: "../assets/child-toys-still-life.jpg"
+      image: "../assets/man2.jpg"
     },
     {
       id: 3,
       name: "Junayed Khan",
       position: "UI / UX Designer",
-      image: "../assets/child-toys-still-life.jpg"
+      image: "../assets/man.jpg"
     },
     {
       id: 4,
       name: "Rera Aziz",
       position: "UI / UX Designer",
-      image: "../assets/child-toys-still-life.jpg"
+      image: "../assets/man2.jpg"
     }
   ];
 
@@ -48,9 +48,9 @@ const TeachersComponent = () => {
 
   return (
     <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <p className="text-yellow-500 font-medium text-sm mb-2">OUR TEACHERS PROFILE BE HERE</p>
+          <p className="text-yellow-500 font-semibold text-sm mb-2">OUR TEACHERS PROFILE BE HERE</p>
           <h2 className="text-3xl font-bold">
             OUR EXPERT TEACHERS IS HERE
           </h2>

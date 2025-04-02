@@ -22,7 +22,7 @@ const VideoBanner = () => {
       ) : (
         <div className="relative w-full h-64 md:h-96">
           <img
-            src="/api/placeholder/1200/400"
+            src="../assets/class.jpg"
             alt="Classroom with teacher and students"
             className="w-full h-full object-cover"
           />

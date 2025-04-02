@@ -151,7 +151,7 @@ const EdubeChildcareWebsite = () => {
             transition={{ duration: 0.8, delay: 1 }}
           >
             <div className="flex">
-              <img src="../assets/icon.png" className="h-20" color="red-500" size={48} />
+              <img src="../assets/ballon.png" className="h-28" color="red-500" size={48} />
           
             </div>
           </motion.div>
@@ -162,7 +162,7 @@ const EdubeChildcareWebsite = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
           >
-            <img src="../assets/icon.png" className="h-20" color="pink-500" size={40} />
+            <img src="../assets/ballon3.png" className="h-20" color="pink-500" size={40} />
           </motion.div>
           
           <motion.div 
@@ -171,7 +171,7 @@ const EdubeChildcareWebsite = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
           >
-            <img src="../assets/icon.png" className="h-20" color="pink-500" size={40} />
+            <img src="../assets/ballon2.png" className="h-20" color="pink-500" size={40} />
           </motion.div>
 
           <motion.div 
@@ -180,7 +180,7 @@ const EdubeChildcareWebsite = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
           >
-            <img src="../assets/icon.png" className="h-20" color="pink-500" size={40} />
+            <img src="../assets/abc.png" className="h-20" color="pink-500" size={40} />
           </motion.div>
           
           <motion.div 
@@ -189,7 +189,7 @@ const EdubeChildcareWebsite = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.6 }}
           >
-            <BookOpen size={64} className="text-blue-500" />
+            <img src="../assets/icons8-reading-100.png" className="h-20" color="pink-500" size={40} />
           </motion.div>
           
           <motion.div 

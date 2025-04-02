@@ -26,7 +26,7 @@ const BlogPostsComponent = () => {
     {
       id: 2,
       title: "Education cost money, but then so does ignorance.",
-      image: "../assets/child-toys-still-life.jpg",
+      image: "../assets/class.jpg",
       date: "15 Nov 2023",
       author: "Admin",
       excerpt: "Learning is a part of Education and can be learned from anyone around us, even from an ant."
@@ -34,7 +34,7 @@ const BlogPostsComponent = () => {
     {
       id: 3,
       title: "Whatever the cost of our libraries, the price is cheap compared to that",
-      image: "../assets/child-toys-still-life.jpg",
+      image: "../assets/mom.jpg",
       date: "10 Nov 2023",
       author: "Admin",
       excerpt: "Learning is a part of Education and can be learned from anyone around us, even from an ant."
@@ -43,9 +43,9 @@ const BlogPostsComponent = () => {
 
   // Image decoration for bottom left
   const educationDecoration = (
-    <div className="absolute -left-24 bottom-0 w-40 h-40 hidden lg:block">
+    <div className="absolute left-10 bottom-44 w-40 h-40 hidden lg:block">
       <motion.img
-        src="../assets/child-toys-still-life.jpg"
+        src="../assets/read.png"
         alt="Educational illustration"
         className="w-full h-full"
         initial={{ opacity: 0, x: -20 }}
@@ -59,7 +59,7 @@ const BlogPostsComponent = () => {
     <section className="py-16 bg-white relative">
       {educationDecoration}
       
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <p className="text-yellow-500 font-medium text-sm mb-2">OUR RECENT BLOGS BE HERE</p>
           <h2 className="text-3xl font-bold">
@@ -83,7 +83,7 @@ const BlogPostsComponent = () => {
                   <img 
                     src={post.image} 
                     alt={post.title} 
-                    className="w-full h-48 object-cover"
+                    className="w-full h-56 object-cover"
                   />
                 )}
               </div>

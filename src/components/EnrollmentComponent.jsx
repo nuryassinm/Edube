@@ -58,7 +58,7 @@ const EnrollmentComponent = () => {
         </motion.div>
       ))}
 
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <motion.div 
             className="md:w-1/2 mb-8 md:mb-0 pr-0 md:pr-8"
@@ -66,7 +66,7 @@ const EnrollmentComponent = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-gray-500 uppercase text-sm mb-2">JOIN OUR CLASS</p>
+            <p className="font-medium uppercase text-sm mb-2">JOIN OUR CLASS</p>
             <h2 className="text-3xl font-bold mb-4">
               ENROLL <span className="text-yellow-500">YOUR KIDS</span> IN OUR CLASS TODAY...
             </h2>

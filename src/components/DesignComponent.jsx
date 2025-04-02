@@ -17,7 +17,7 @@ const CoursesComponent = () => {
   const courses = [
     {
       id: 1,
-      image: "../assets/child-toys-still-life.jpg",
+      image: "../assets/class.jpg",
       subject: "Subject: Art",
       title: "Our complete and bestest Art Tutorial For Beginners",
       description: "Learning is an education that makes sense, and it needs awareness to reach the remote.",
@@ -45,7 +45,7 @@ const CoursesComponent = () => {
     },
     {
       id: 3,
-      image: "../assets/child-toys-still-life.jpg",
+      image: "../assets/mockup-wall-children39s-roomchildren39s-playroom-wall-white-color-background.jpg",
       subject: "Subject: English",
       title: "Our complete and bestest English Tutorial For Beginners",
       description: "Learning is an education that makes sense, and it needs awareness to reach the remote.",
@@ -163,9 +163,9 @@ const CoursesComponent = () => {
           ))}
         </div>
 
-        <div className="mt-10 text-center">
+        <div className="mt-10 text-center w-full">
           <motion.button 
-            className="bg-yellow-400 text-black font-medium px-8 py-3 w-full md:w-auto"
+            className="bg-yellow-400 text-black font-medium px-8 py-3 w-full "
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
           >

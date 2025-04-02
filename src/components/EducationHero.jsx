@@ -28,22 +28,22 @@ const EducationHero = () => {
 
   const features = [
     {
-      avatar: "../assets/icon.png",
+      avatar: "../assets/avatar.png",
       title: "Certified Teachers",
       description: "Education must be given top priority by every country. All children and youth of a country must have access"
     },
     {
-      avatar: "../assets/icon.png",
+      avatar: "../assets/avatar2.png",
       title: "24/7 Online Support",
       description: "Education must be given top priority by every country. All children and youth of a country must have access"
     },
     {
-      avatar: "../assets/icon.png",
+      avatar: "../assets/support.png",
       title: "Best Teaching",
       description: "Education must be given top priority by every country. All children and youth of a country must have access"
     },
     {
-      avatar: "../assets/icon.png",
+      avatar: "../assets/icons8-reading-100.png",
       title: "Online Class",
       description: "Education must be given top priority by every country. All children and youth of a country must have access"
     }
@@ -114,11 +114,19 @@ const EducationHero = () => {
 
           {/* Right side - Content */}
           <motion.div 
-            className="md:w-1/2 mt-16 md:mt-0 md:pl-16"
+            className="md:w-1/2 mt-16 relative md:mt-0 md:pl-16"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
+            <motion.div 
+            className="absolute -right-64 top-10"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+          >
+            <img src="../assets/reading-girl.png" className="h-60" color="pink-500" size={40} />
+          </motion.div>
             <div className="mb-4 flex gap-3 items-center">
               <span className="text-[#facc15] font-medium uppercase tracking-wide ">KNOW ABOUT US</span> <div className='h-1 w-24 bg-[#ffe372]'></div>
             </div>
