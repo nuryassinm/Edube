@@ -3,12 +3,16 @@ import { motion } from "framer-motion";
 import Nav from "../components/Nav";
 import Hero from "../components/Hero";
 import { useState, useEffect } from "react";
-import Mission from "../components/Mission";
-import FeaturedProperties from "../components/FeaturedProperties";
+import BlogPostsComponent from "../components/BlogPostsComponent";
+import EducationHero from "../components/EducationHero";
 import Footer from "../components/Footer"
 import DesignComponent from "../components/DesignComponent";
-import MapReviewSection from "../components/MapReviewSection";
-import Blog from "../components/Blog";
+import EducationStats from "../components/EducationStats";
+import EnrollmentComponent from "../components/EnrollmentComponent";
+import OpinionBadgesComponent from "../components/OpinionBadgesComponent";
+import VideoBanner from "../components/VideoBanner";
+import JoinTestimonialComponent from "../components/JoinTestimonialComponent";
+import TeachersComponent from "../components/TeachersComponent";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,7 +25,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen font-sans overflow-hidden bg-white">
+    <div className="min-h-screen font-mono overflow-hidden bg-white">
       {/* <Nav /> */}
       {isLoading ? (
         <SkeletonLoader />
@@ -33,10 +37,15 @@ function Home() {
         >
           <Hero />
           {/* <Mission /> */}
-          <FeaturedProperties />
-          <MapReviewSection />
+          <EducationHero />
+          <EducationStats />
           <DesignComponent />
-          <Blog />
+          <EnrollmentComponent />
+          <TeachersComponent />
+          <JoinTestimonialComponent />
+          <VideoBanner />
+          <BlogPostsComponent />
+          <OpinionBadgesComponent />
           <Footer />
 
         </motion.div>

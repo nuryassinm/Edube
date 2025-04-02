@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, User, Menu, X } from 'lucide-react';
+import { Search, User, Menu, X ,GraduationCap} from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Nav = () => {
@@ -23,9 +23,15 @@ const Nav = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <a href="#" className="flex items-center">
-          <img src="/api/placeholder/200/50" alt="Edube Logo" className="h-10" />
-        </a>
+        <div className="flex border-b-2 items-center font-bold text-2xl">
+      <GraduationCap className="text-[#FACC15] mr-1" size={24} />
+      <span className="text-gray-800">E</span>
+      <span className="text-[#FACC15]">d</span>
+      <span className="text-gray-800">u</span>
+      <span className="text-[#FACC15]">b</span>
+      <span className="text-gray-800">e</span>
+      <span className="text-[#FACC15]">.</span>
+    </div>
       </motion.div>
       
       {/* Mobile menu button */}
@@ -54,19 +60,19 @@ const Nav = () => {
             <a href="#" className="block py-2 pr-4 pl-3 text-gray-900 border-b md:border-0 md:p-0 font-semibold">Home</a>
           </li>
           <li>
-            <a href="#" className="block py-2 pr-4 pl-3 text-gray-900 border-b md:border-0 md:p-0">Courses</a>
+            <a href="#" className="block py-2 pr-4 pl-3 text-gray-600 border-b md:border-0 md:p-0">Courses</a>
           </li>
           <li>
-            <a href="#" className="block py-2 pr-4 pl-3 text-gray-900 border-b md:border-0 md:p-0">Pages</a>
+            <a href="#" className="block py-2 pr-4 pl-3 text-gray-600 border-b md:border-0 md:p-0">Pages</a>
           </li>
           <li>
-            <a href="#" className="block py-2 pr-4 pl-3 text-gray-900 border-b md:border-0 md:p-0">Blog</a>
+            <a href="#" className="block py-2 pr-4 pl-3 text-gray-600 border-b md:border-0 md:p-0">Blog</a>
           </li>
           <li>
-            <a href="#" className="block py-2 pr-4 pl-3 text-gray-900 border-b md:border-0 md:p-0">Contact</a>
+            <a href="#" className="block py-2 pr-4 pl-3 text-gray-600 border-b md:border-0 md:p-0">Contact</a>
           </li>
           <li>
-            <a href="#" className="block py-2 pr-4 pl-3 text-gray-900 md:border-0 md:p-0">About Us</a>
+            <a href="#" className="block py-2 pr-4 pl-3 text-gray-600 md:border-0 md:p-0">About Us</a>
           </li>
         </ul>
       </motion.div>
@@ -76,7 +82,7 @@ const Nav = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
       >
-        <button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-2 px-4 rounded">
+        <button className="bg-[#FACC15] hover:bg-[#facc15ee] text-gray-900 font-bold py-2 px-4 rounded">
           Admit Now
         </button>
       </motion.div>

@@ -49,14 +49,15 @@ const EdubeChildcareWebsite = () => {
   );
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col bg-white">
       {/* Top Bar */}
       <motion.div 
-        className="bg-yellow-400 py-2 px-4 flex justify-between items-center"
+        className="bg-[#FACC15] py-2 px-4 flex justify-center "
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
+        <div className='flex justify-between max-w-7xl w-full items-center'>
         <div className="flex items-center space-x-4">
           <div className="flex items-center text-sm">
             <Mail size={16} className="mr-1" />
@@ -70,34 +71,35 @@ const EdubeChildcareWebsite = () => {
         <div>
           <a href="#" className="text-sm hover:underline">Login / Register</a>
         </div>
+        </div>
       </motion.div>
 
       {/* Navbar */}
       <Nav />
       {/* Hero Section */}
       <motion.div 
-        className="flex-grow bg-purple-50 relative overflow-hidden"
+        className="flex-grow bg-[#F8F2FE] relative overflow-hidden"
         initial="hidden"
         animate="visible"
         variants={staggerChildren}
       >
-        <div className="container mx-auto px-4 py-12 md:py-16 flex flex-col md:flex-row items-center relative">
+        <div className="max-w-7xl mx-auto px-4 py-12 md:pt-16 pb-32 flex flex-col md:flex-row items-center ">
           {/* Left content */}
           <motion.div 
             className="w-full md:w-1/2 z-10 mb-8 md:mb-0"
             variants={fadeIn}
           >
             <motion.div variants={fadeIn}>
-              <p className="text-gray-800 mb-2">Play, Learn and Grow</p>
+              <p className="text-gray-800 font-semibold mb-2">Play, Learn and Grow</p>
             </motion.div>
             
             <motion.h1 
-              className="text-4xl md:text-5xl font-bold mb-4"
+              className="text-4xl md:text-5xl font-extrabold mb-4"
               variants={fadeIn}
             >
               <span className="text-gray-800">Edube </span>
-              <span className="text-yellow-500">Childcare,</span>
-              <span className="text-gray-800"> we are Professional...</span>
+              <span className="text-[#FACC15]">Childcare,</span>
+              <span className="text-gray-800"> we <br /> are Professional...</span>
             </motion.h1>
             
             <motion.p 
@@ -112,7 +114,7 @@ const EdubeChildcareWebsite = () => {
               className="flex space-x-4"
               variants={fadeIn}
             >
-              <button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-6 py-3 rounded font-medium">
+              <button className="bg-[#FACC15] hover:bg-[#facc15] text-gray-900 px-6 py-3 rounded font-medium">
                 Discover More
               </button>
               <button className="border-2 border-gray-400 hover:border-gray-600 text-gray-800 px-6 py-3 rounded font-medium">
@@ -133,7 +135,7 @@ const EdubeChildcareWebsite = () => {
               // Actual image with oval shape
               <div className="rounded-full overflow-hidden">
                 <img 
-                  src="/api/placeholder/800/600" 
+                  src="../assets/land.jpg" 
                   alt="Children reading books" 
                   className="w-full"
                 />
@@ -143,39 +145,46 @@ const EdubeChildcareWebsite = () => {
           
           {/* Decorative elements */}
           <motion.div 
-            className="absolute left-0 top-20"
+            className="absolute left-10 top-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
             <div className="flex">
-              <Balloon color="red-500" size={48} />
-              <Balloon color="blue-500" size={42} className="ml-2" />
-              <Balloon color="green-500" size={38} className="ml-4" />
-              <Balloon color="orange-500" size={44} className="ml-1" />
+              <img src="../assets/icon.png" className="h-20" color="red-500" size={48} />
+          
             </div>
           </motion.div>
           
           <motion.div 
-            className="absolute right-8 top-24"
+            className="absolute right-10 top-10"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
           >
-            <Balloon color="pink-500" size={40} />
+            <img src="../assets/icon.png" className="h-20" color="pink-500" size={40} />
           </motion.div>
           
           <motion.div 
-            className="absolute right-20 bottom-10"
+            className="absolute right-10 bottom-28"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
           >
-            <Balloon color="pink-500" size={40} />
+            <img src="../assets/icon.png" className="h-20" color="pink-500" size={40} />
+          </motion.div>
+
+          <motion.div 
+            className="absolute right-1/2 bottom-28"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.4 }}
+          >
+            <img src="../assets/icon.png" className="h-20" color="pink-500" size={40} />
           </motion.div>
           
           <motion.div 
-            className="absolute left-12 bottom-0"
+            className="absolute left-10 bottom-28"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.6 }}
@@ -198,19 +207,41 @@ const EdubeChildcareWebsite = () => {
 
           {/* Star decorations */}
           <motion.div 
-            className="absolute right-20 top-0"
+            className="absolute left-1/2 top-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 2 }}
           >
-            <div className="flex flex-wrap w-32">
-              <Star size={12} className="text-yellow-400 m-1" />
-              <Star size={10} className="text-yellow-400 m-1" />
-              <Star size={8} className="text-yellow-400 m-1" />
-              <Star size={14} className="text-yellow-400 m-1" />
-              <Star size={10} className="text-yellow-400 m-1" />
-              <Star size={12} className="text-yellow-400 m-1" />
-              <Star size={8} className="text-yellow-400 m-1" />
+            <div className="flex flex-wrap -rotate-12 justify-center w-44">
+            <Star size={10} className="text-[#FACC15] m-1" />
+              <Star size={12} className="text-[#FACC15] m-1" />
+              <Star size={10} className="text-[#FACC15] m-1" />
+              <Star size={8} className="text-[#FACC15] m-1" />
+              <Star size={14} className="text-[#FACC15] m-1" />
+              <Star size={10} className="text-[#FACC15] m-1" />
+              <Star size={12} className="text-[#FACC15] m-1" />
+              <Star size={10} className="text-[#FACC15] m-1" />
+              <div className="flex flex-wrap justify-center w-32">
+              <Star size={10} className="text-[#FACC15] m-1" />
+              <Star size={8} className="text-[#FACC15] m-1" />
+              <Star size={8} className="text-[#FACC15] m-1" />
+              <Star size={14} className="text-[#FACC15] m-1" />
+              <Star size={10} className="text-[#FACC15] m-1" />
+              <Star size={12} className="text-[#FACC15] m-1" />
+              <Star size={10} className="text-[#FACC15] m-1" />
+              </div>
+              <div className="flex flex-wrap justify-center w-32">
+              <Star size={10} className="text-[#FACC15] m-1" />
+              <Star size={8} className="text-[#FACC15] m-1" />
+              <Star size={8} className="text-[#FACC15] m-1" />
+              <Star size={14} className="text-[#FACC15] m-1" />
+              <Star size={10} className="text-[#FACC15] m-1" />
+              </div>
+              
+              <div className="flex flex-wrap justify-center w-32">
+              <Star size={10} className="text-[#FACC15] m-1" />
+              
+              </div>
             </div>
           </motion.div>
         </div>
