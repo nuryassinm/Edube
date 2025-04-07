@@ -90,7 +90,7 @@ const JoinTestimonialComponent = () => {
             <img 
               src="../assets/child-toys-still-life.jpg" 
               alt="Teacher at chalkboard" 
-              className="w-full h-80 object-cover"
+              className="w-full md:h-80 object-cover"
             />
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           </div>

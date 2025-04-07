@@ -53,7 +53,7 @@ const EducationHero = () => {
     <div className="w-full bg-white">
       {/* Features Section */}
       <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -130,7 +130,7 @@ const EducationHero = () => {
             <div className="mb-4 flex gap-3 items-center">
               <span className="text-[#facc15] font-medium uppercase tracking-wide ">KNOW ABOUT US</span> <div className='h-1 w-24 bg-[#ffe372]'></div>
             </div>
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="md:text-3xl text-2xl font-bold mb-4">
               LEARN ABOUT <span className="text-[#facc15]">OUR WORK</span> AND <span className="text-[#facc15]">OUR ACTIVITIES...</span>
             </h2>
             <p className="text-gray-600 mb-6">

@@ -57,7 +57,7 @@ const EdubeChildcareWebsite = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className='flex justify-between max-w-7xl w-full items-center'>
+        <div className='flex md:justify-between flex-wrap max-w-7xl w-full items-center'>
         <div className="flex items-center space-x-4">
           <div className="flex items-center text-sm">
             <Mail size={16} className="mr-1" />
@@ -83,7 +83,7 @@ const EdubeChildcareWebsite = () => {
         animate="visible"
         variants={staggerChildren}
       >
-        <div className="max-w-7xl mx-auto px-4 py-12 md:pt-16 pb-32 flex flex-col md:flex-row items-center ">
+        <div className="max-w-7xl mx-auto gap-3 px-4 py-12 md:pt-16 pb-32 flex flex-col lg:flex-row items-center ">
           {/* Left content */}
           <motion.div 
             className="w-full md:w-1/2 z-10 mb-8 md:mb-0"
@@ -94,7 +94,7 @@ const EdubeChildcareWebsite = () => {
             </motion.div>
             
             <motion.h1 
-              className="text-4xl md:text-5xl font-extrabold mb-4"
+              className="text-3xl lg:text-5xl font-extrabold mb-4"
               variants={fadeIn}
             >
               <span className="text-gray-800">Edube </span>
@@ -124,88 +124,100 @@ const EdubeChildcareWebsite = () => {
           </motion.div>
           
           {/* Right content - Hero image with oval shape */}
-          <motion.div 
-            className="w-full md:w-1/2 relative"
-            variants={fadeIn}
-          >
-            {!imagesLoaded ? (
-              // Skeleton loader with oval shape
-              <div className="rounded-full w-full aspect-[4/3] bg-gray-200 animate-pulse overflow-hidden"></div>
-            ) : (
-              // Actual image with oval shape
-              <div className="rounded-full overflow-hidden">
-                <img 
-                  src="../assets/land.jpg" 
-                  alt="Children reading books" 
-                  className="w-full"
-                />
-              </div>
-            )}
-          </motion.div>
+          <div className="w-full md:w-1/2 -rotate-[130deg] relative">
+      {!imagesLoaded ? (
+        // Skeleton loader with blob shape
+        <div className="w-full aspect-[4/3] bg-gray-200 animate-pulse overflow-hidden rounded-[30%]"></div>
+      ) : (
+        // Image inside a larger blob shape
+        <svg
+          viewBox="0 0 1000 800"
+          className="w-full h-auto"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <clipPath id="blobClip">
+              <path
+                fill="none"
+                d="M375.5,29.5Q280,59,246.5,115.5Q213,172,168,219.5Q123,267,103,333.5Q83,400,150,444.5Q217,489,310,495.5Q403,502,469,446Q535,390,589.5,341.5Q644,293,644,229Q644,165,607.5,112.5Q571,60,489,22.5Q407,0,375.5,29.5Z"
+                transform="translate(80 50) scale(1.2)"
+              />
+            </clipPath>
+          </defs>
+          <image
+            href="../assets/land.jpg"
+            width="1000"
+            height="800"
+            clipPath="url(#blobClip)"
+            preserveAspectRatio="xMidYMid slice"
+          />
+        </svg>
+      )}
+      
+      {/* Optional decorative elements */}
+      <div className="absolute -top-6 -left-6 text-yellow-300">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+          <path d="M40 0L42.5 37.5L80 40L42.5 42.5L40 80L37.5 42.5L0 40L37.5 37.5L40 0Z" fill="currentColor" />
+        </svg>
+      </div>
+      
+      <div className="absolute -bottom-4 -right-4 text-yellow-300">
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+          <path d="M30 0L32 28L60 30L32 32L30 60L28 32L0 30L28 28L30 0Z" fill="currentColor" />
+        </svg>
+      </div>
+    </div>
+
           
           {/* Decorative elements */}
           <motion.div 
-            className="absolute left-10 top-10"
+            className="absolute left-10 md:top-10 -top-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
             <div className="flex">
-              <img src="../assets/ballon.png" className="h-28" color="red-500" size={48} />
+              <img src="../assets/ballon.png" className="md:h-28 h-10" color="red-500" size={48} />
           
             </div>
           </motion.div>
           
           <motion.div 
-            className="absolute right-10 top-10"
+            className="absolute right-10 md:top-10 top-5"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
           >
-            <img src="../assets/ballon3.png" className="h-20" color="pink-500" size={40} />
+            <img src="../assets/ballon3.png" className="md:h-20 h-12" color="pink-500" size={40} />
           </motion.div>
           
           <motion.div 
-            className="absolute right-10 bottom-28"
+            className="absolute right-10 md:bottom-28 bottom-10 "
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
           >
-            <img src="../assets/ballon2.png" className="h-20" color="pink-500" size={40} />
+            <img src="../assets/ballon2.png" className="md:h-20 h-12" color="pink-500" size={40} />
           </motion.div>
 
           <motion.div 
-            className="absolute right-1/2 bottom-28"
+            className="absolute right-1/2 md:bottom-28 bottom-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
           >
-            <img src="../assets/abc.png" className="h-20" color="pink-500" size={40} />
+            <img src="../assets/abc.png" className="md:h-20 h-12" color="pink-500" size={40} />
           </motion.div>
           
           <motion.div 
-            className="absolute left-10 bottom-28"
+            className="absolute left-10 md:bottom-28 bottom-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.6 }}
           >
-            <img src="../assets/icons8-reading-100.png" className="h-20" color="pink-500" size={40} />
+            <img src="../assets/icons8-reading-100.png" className="md:h-20 h-12" color="pink-500" size={40} />
           </motion.div>
           
-          <motion.div 
-            className="absolute left-1/2 bottom-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.8 }}
-          >
-            <div className="flex">
-              <span className="text-red-500 font-bold text-2xl">A</span>
-              <span className="text-blue-500 font-bold text-2xl">B</span>
-              <span className="text-green-500 font-bold text-2xl">C</span>
-            </div>
-          </motion.div>
-
-          {/* Star decorations */}
           <motion.div 
             className="absolute left-1/2 top-10"
             initial={{ opacity: 0 }}
