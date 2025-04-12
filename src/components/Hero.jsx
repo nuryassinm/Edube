@@ -83,10 +83,10 @@ const EdubeChildcareWebsite = () => {
         animate="visible"
         variants={staggerChildren}
       >
-        <div className="max-w-7xl mx-auto gap-3 px-4 py-12 md:pt-16 pb-32 flex flex-col lg:flex-row items-center ">
+        <div className="max-w-[95rem] mx-auto gap-3 px-4 py-12 md:pt-16 pb-32 grid grid-cols-2 items-center ">
           {/* Left content */}
           <motion.div 
-            className="w-full md:w-1/2 z-10 mb-8 md:mb-0"
+            className="w-full z-10 mb-8 md:mb-0"
             variants={fadeIn}
           >
             <motion.div variants={fadeIn}>
@@ -124,7 +124,7 @@ const EdubeChildcareWebsite = () => {
           </motion.div>
           
           {/* Right content - Hero image with oval shape */}
-          <div className="w-full md:w-1/2 -rotate-[130deg] relative">
+          <div className="w-full  -rotate-[130deg] relative">
       {!imagesLoaded ? (
         // Skeleton loader with blob shape
         <div className="w-full aspect-[4/3] bg-gray-200 animate-pulse overflow-hidden rounded-[30%]"></div>
