@@ -61,11 +61,11 @@ const EdubeChildcareWebsite = () => {
         <div className="flex items-center space-x-4">
           <div className="flex items-center text-sm">
             <Mail size={16} className="mr-1" />
-            <span>edub432@gmail.com</span>
+            <span>Example@gmail.com</span>
           </div>
           <div className="flex items-center text-sm">
             <Phone size={16} className="mr-1" />
-            <span>+880 1234 234632</span>
+            <span>+0000 0000 000000</span>
           </div>
         </div>
         <div>

@@ -21,8 +21,8 @@ const FooterComponent = () => {
   };
 
   const contactInfo = {
-    email: 'Edube@gmail.com',
-    phone: '+098823 45 908',
+    email: 'example@gmail.com',
+    phone: '+000000 00 000',
     address: '27-3 North south beubinde, USA'
   };
 
