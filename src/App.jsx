@@ -80,7 +80,7 @@ function App() {
         {networkSpeedStatus && <p>{networkSpeedStatus}</p>}
       </div>
       <iframe
-  src="https://www.mixweb.io/banner"
+  src="https://www.mixweb.io/banner?industry=Babies%20%26%20Children"
   width="100%"
   height="75px"
   frameBorder="0"
@@ -93,6 +93,7 @@ function App() {
     backgroundColor: "white",
   }}
 ></iframe>
+
 <motion.header
   initial={{ y: -50, opacity: 0 }}
   animate={{ y: 0, opacity: 1 }}
